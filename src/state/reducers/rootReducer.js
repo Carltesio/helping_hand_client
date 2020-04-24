@@ -36,7 +36,8 @@ const rootReducer = (state = initialState, action) => {
         showLogin: true,
         showRegister: false,
         message: "",
-        showHelpMap: false
+        showHelpMap: false,
+        showTeam: false
       };
     case actionTypes.REGISTER_USER:
       return {
@@ -44,6 +45,7 @@ const rootReducer = (state = initialState, action) => {
         showLogin: false,
         showRegister: true,
         message: "",
+        showTeam: false
       };
     case actionTypes.CLOSE_LOGIN:
       return {
@@ -101,21 +103,30 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         requests: action.payload
       };
-      case actionTypes.SET_ADDRESS:
+    case actionTypes.SET_ADDRESS:
       return {
         ...state,
         requesterAddress: action.payload
       };
-      case actionTypes.SET_COORDS:
-        return {
-          ...state,
-          position: action.position
-        };
-        case actionTypes.CHANGE_MARKER_WINDOW:
-          return {
-            ...state,
-            showMarkerWindow: action.payload
-          };
+    case actionTypes.SET_COORDS:
+      return {
+        ...state,
+        position: action.position
+      };
+    case actionTypes.CHANGE_MARKER_WINDOW:
+      return {
+        ...state,
+        showMarkerWindow: action.payload
+      };
+    case actionTypes.VIEW_TEAM:
+      debugger
+      return {
+        ...state,
+        showHelpMap: false,
+        showRequestForm: false,
+        showTeam: true,
+        showHero: false
+      };
     default:
       return state;
   }
