@@ -1,3 +1,7 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c63fc4f3-bb39-4741-a94b-370cf872d50a/deploy-status)](https://app.netlify.com/sites/helpinghandproject/deploys)
+
+[![Build Status](https://semaphoreci.com/api/v1/carltesio/helping_hand_backend/branches/development/badge.svg)](https://semaphoreci.com/carltesio/helping_hand_backend)
+
 # [Helping Hand] (User interface / Web application)
 
 # Welcome to our Application! 
